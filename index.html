@@ -5,11 +5,11 @@
 
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Work+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro|Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
 
     <!-- Imports -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.min.css">
     <script src="js/main.js"></script>
 
   </head>
@@ -18,22 +18,13 @@
     <nav>
       <ul>
         <li data-panel-id="about-me-info-pane">
-          <span class="normal-list-element">Home</span>
-          <span class="hover-list-element hover-1"> Know   </span>
-          <span class="hover-list-element hover-2"> About  </span>
-          <span class="hover-list-element hover-3"> Me     </span>
+          Home
         </li>
         <li data-panel-id="work-info-pane">
-          <span class="normal-list-element">Work</span>
-          <span class="hover-list-element hover-1"> See  </span>
-          <span class="hover-list-element hover-2"> My   </span>
-          <span class="hover-list-element hover-3"> Work </span>
+          Work
         </li>
         <li data-panel-id="contact-info-pane">
-          <span class="normal-list-element"> Contact </span>
-          <span class="hover-list-element hover-1"> Get   </span>
-          <span class="hover-list-element hover-2"> in    </span>
-          <span class="hover-list-element hover-3"> Touch </span>
+          Contact
         </li>
       </ul>
       <h1 id="logo">A</h1>
@@ -42,7 +33,7 @@
 
       <div id="about-me-info-pane" class="info-pane">
         <h1 id="main-text">Hi! I am Aaditya Tank,</h1>
-        <p>I am a graphic designer and 3d modeler and more</p>
+        <p class="body-text">I am a graphic designer and 3d modeler</p>
         <input type="button" value="See my work >" class="my-work-button" onclick="show_panel('work-info-pane');"></input>
       </div>
 

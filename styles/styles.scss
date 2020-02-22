@@ -16,22 +16,8 @@ $brand_color_3: #9eadb7;
 }
 
 body {
-  background-color: #ebebeb;
-  background-image: url(../images/paper.jpg);
-  background-repeat: repeat;
-  background-size: 725.5px;
-}
-
-#background-overlay {
-  width:100vw;
-  height:100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgba(239, 239, 239, 0.929);
-  background: linear-gradient(90deg, rgba(246,246,246,0.95) 0%, rgba(233,233,233,0.95) 100%);
-  z-index: -10;
-  opacity: 0.95;
+  background: rgb(243,243,243);
+  background: linear-gradient(45deg, rgba(243,243,243,1) 0%, rgba(236,235,239,1) 100%);
 }
 
 main {
@@ -49,7 +35,7 @@ main {
 
 .info-pane > * {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   display: block;
   text-align: center;
 }
@@ -57,7 +43,8 @@ main {
 #main-text {
   margin-top:   30vh;
   font-size:    30px;
-  font-family:  muli;
+  font-family:  dosis;
+  font-weight: 500;
 }
 
 .info-pane {
@@ -91,12 +78,14 @@ main {
   border-radius: 0px;
   background: rgba(0,0,0,0);
   padding: 12px 35px;
-  box-shadow: -0.5px -0.5px 1px 0.5px #f5f5f5, 1px 1px 1px 0px rgba(59, 59, 59, 0.41), 1px 1px 2px 1px white, 0px 0px 1px 2px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
+  margin-top: 20px;
+  font-size: 16px;;
 }
 
 .my-work-button:hover {
-  box-shadow: -0.5px -0.5px 1px 0.5px #f8f8f8, 6px 8px 25px 2px hsla(0, 0%, 37%, 0.259);
+  background: #333;
+  color: #f3f3f3;
 }
 
 .show-panel {
@@ -124,11 +113,8 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-  color: #fff;
-  height: 6em;
-  margin-top: -2em;
   background: #333;
-  box-shadow: -0.5px -0.5px 1px 0.5px hsl(0, 0%, 95%), 6px 8px 25px 2px hsla(0, 0%, 37%, 0.259);
+  color: #f3f3f3;
 }
 
 nav > ul {
@@ -136,50 +122,7 @@ nav > ul {
   margin-right: 5vw;
   margin-top: 3em;
 }
-.normal-list-element {
-  z-index: 11;
-  height: 2em;
-  opacity: 1;
-}
-.hover-list-element, .normal-list-element {
-  display: inline-block;
-  position: absolute;
-  width : 100%;
-  width : 8em;
-  left: 10px;
-  line-height: 2em;
-  transition: all .3s ease;
-}
 
-.hover-1 {
-  margin-top: 2em;
-  opacity : 0;
-}
-.hover-2 {
-  margin-top: 4em;
-  opacity : 0;
-}
-.hover-3 {
-  margin-top: 6em;
-  opacity : 0;
-}
-
-.hover-1.hover {
-  margin-top: 0em;
-  color: white;
-  opacity: 1;
-}
-.hover-2.hover {
-  margin-top: 2em;
-  color: white;
-  opacity: 1;
-}
-.hover-3.hover {
-  margin-top: 4em;
-  color: white;
-  opacity: 1;
-}
-.normal-list-element.hover {
-  margin-top: -2em;
-  color: white;
+.body-text {
+  font-family: "segoe ui", sans-serif;
 }
