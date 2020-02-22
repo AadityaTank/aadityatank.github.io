@@ -9,6 +9,7 @@ $brand_color_2: #8b9faa;
 $brand_color_3: #9eadb7;
 $brand_color_3: #9eadb7;
 
+$nav_element_top_margin : 1em;
 /* Site Css starts here */
 * {
   font-family: Dosis;
@@ -28,7 +29,7 @@ main {
 
 #logo {
   margin-left:  5vw;
-  margin-top: calc(3em + 10px);
+  margin-top: calc($nav_element_top_margin + 10px);
   line-height: 2em;
   display:      inline-block;
 }
@@ -120,7 +121,7 @@ nav > ul > li:hover {
 nav > ul {
   float:        right;
   margin-right: 5vw;
-  margin-top: 3em;
+  margin-top: $nav_element_top_margin;
 }
 
 .body-text {

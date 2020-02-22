@@ -34,7 +34,7 @@ main {
 
 #logo {
   margin-left: 5vw;
-  margin-top: calc(3em + 10px);
+  margin-top: calc($nav_element_top_margin + 10px);
   line-height: 2em;
   display: inline-block;
 }
@@ -125,7 +125,7 @@ nav > ul > li:hover {
 nav > ul {
   float: right;
   margin-right: 5vw;
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 .body-text {
