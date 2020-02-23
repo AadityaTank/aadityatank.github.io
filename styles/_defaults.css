@@ -1,0 +1,16 @@
+/* Defaults : Overrides the frequent issues that you face */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input:focus, button:focus {
+  outline: 0;
+}

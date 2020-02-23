@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Lorem Ipsum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro|Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+
+    <!-- Imports -->
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <script src="js/main.js"></script>
+
+  </head>
   <body>
-    <h1>This is a heading</h1>
-    <p>This is a paragraph.</p>
+    <div id="background-overlay"></div>
+    <nav>
+      <ul>
+        <li data-panel-id="about-me-info-pane">
+          Home
+        </li>
+        <li data-panel-id="work-info-pane">
+          Work
+        </li>
+        <li data-panel-id="contact-info-pane">
+          Contact
+        </li>
+      </ul>
+      <h1 id="logo"></h1>
+    </nav>
+    <main>
+
+      <div id="about-me-info-pane" class="info-pane">
+        <h1 id="main-text">Hi! I am Aaditya Tank,</h1>
+        <p class="body-text">I am a graphic designer and 3d modeler</p>
+        <input type="button" value="See my work >" class="my-work-button" onclick="show_panel('work-info-pane');"></input>
+      </div>
+
+      <div id="work-info-pane" class="info-pane">
+        <h2 id="main-text">Work</h2>
+      </div>
+
+      <div id="contact-info-pane" class="info-pane">
+        <h2 id="main-text">Contact</h2>
+      </div>
+
+    </main>
   </body>
 </html>
