@@ -1,0 +1,72 @@
+.rootfolder-icon {
+    color: #5ab9e6 !important;
+    background: linear-gradient(to right, #2e3b56, #2d334d) !important;
+    background: linear-gradient(to right, #314468, #2d334d) !important;
+    border-radius: 5px !important;
+    padding-left: 5px !important;
+  }
+  .monaco-list-row.selected .monaco-tl-contents .monaco-icon-label-container {
+    color: #00ffdc !important;
+    border-radius: 5px !important;
+    padding-left: 10px;
+    background: linear-gradient(to right, #36e3ff38, #34547659) !important;
+    /* background: #5fe9ff1f !important; */
+  }
+  .monaco-list-row.selected span {
+    color: #00ffdc !important;
+  }
+  .monaco-list-row.selected {
+    background: none !important;
+  }
+  .show-file-icons .rootfolder-icon::before {
+    background: none !important;
+    width: 0px !important;
+  }
+  /* .title.tabs {
+    display: none;
+  } */
+  .sidebar,
+  .activitybar,
+  .monaco-list-rows,
+  .editor-container,
+  .terminal-outer-container,
+  .part,
+  .statusbar,
+  .monaco-editor,
+  .content,
+  .monaco-editor .margin,
+  .monaco-editor-background,
+  .monaco-editor .inputarea.ime-input .monaco-editor .margin,
+  .title.tabs.show-file-icons,
+  .tab,
+  .titlebar,
+  .tab-actions-right,
+  .monaco-breadcrumbs,
+  .split-view-container {
+    background-color: #0000 !important;
+    background: #0000 !important;
+  }
+  .monaco-workbench {
+    background: linear-gradient(135deg, rgb(43 50 74) 0%, rgb(29, 32, 46) 100%);
+  }
+  .monaco-editor .view-overlays .current-line {
+    background-color: rgba(0, 0, 0, 0.13) !important;
+  }
+  .activitybar,
+  .statusbar,
+  .titlebar,
+  .tabs {
+    opacity: 0.3;
+    transition: opacity 0.25s ease-in-out;
+  }
+  .sidebar {
+    opacity: 0.5;
+    transition: opacity 0.25s ease-in-out;
+  }
+  .activitybar:hover,
+  .statusbar:hover,
+  .titlebar:hover,
+  .sidebar:hover,
+  .tabs:hover {
+    opacity: 1;
+  }
