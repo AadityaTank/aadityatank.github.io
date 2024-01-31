@@ -1,50 +1,534 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Lorem Ipsum</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <!-- Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro|Dosis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aaditya Tank - Portfolio</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #405e47;
+        background: radial-gradient(
+          circle at top left,
+          #98b58a 0%,
+          #405e47 100%
+        );
+        background: radial-gradient(
+          circle at top left, 
+          hsl(103, 22%, 43%) 0%, 
+          hsl(120, 19%, 18%) 100%
+        );
+        background: radial-gradient(
+          circle at top left, 
+          hsl(103, 22%, 43%) 0%, 
+          hsl(120, 22%, 25%) 100%
+        );
+        background: radial-gradient(
+          circle at top left, 
+          hsl(115, 23%, 45%) 0%, 
+          hsl(137, 32%, 25%) 100%
+        );
+        background: radial-gradient(
+          circle at top left, 
+          hsl(115, 23%, 55%) 0%, 
+          hsl(140, 32%, 32%) 100%
+        );
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 5px;
+        margin: 0px;
+        overflow: none;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+      }
+      main {
+        width: 100%;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 0px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      ul.stack > li {
+        border-radius: 5px;
+        padding: 2px 12px;
+        color: #b1e5b9;
+        color: #0008;
+        font-weight: 400;
+        border: 1px solid #0003;
+      }
 
-    <!-- Imports -->
-    <link rel="stylesheet" href="styles/styles.min.css">
-    <script src="js/main.js"></script>
+      .project-link {
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 2px 12px;
+        color: #b1e5b9;
+        color: #0008;
+        font-weight: 400;
+        border: 1px solid #0003;
+      }
 
+      section#experience {
+        padding-top: 50px;
+      }
+      section#experience .section-title {
+        text-transform: uppercase;
+        font-size: 28px;
+        color: #0008;
+      }
+      .project-list h3 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        color: #000a;
+      }
+      .project-list {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      section#experience.project {
+        background-color: #00000005;
+        border-radius: 10px;
+        padding: 20px;
+        flex: 1 1 43%;
+        height: 200px;
+        border: 1px solid #0002;
+      }
+
+      .project-pad {
+        flex: 1 1 45%;
+        padding: 10px;
+        height: 0px;
+      }
+
+      .closer {
+        color: #0005;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+      }
+      .actions > button,
+      .actions > a {
+        padding: 7.5px 24px;
+        background-color: #0003;
+        background: linear-gradient(135deg, #0003, #0003) ;
+        outline: unset;
+        border: none;
+        text-decoration: unset;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: roboto;
+        border-radius: 5px;
+        color: #fff9;
+        background-image: linear-gradient(to left, rgba(16, 55, 34, 0.2), rgba(22, 69, 35, 0.2), #177949, #198b4c);
+        background-size: 300% 100%;
+        background-position: 100% 0;
+        moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+      }
+      .actions > button:hover,
+      .actions > a:hover {
+        background-position: 0% 0;
+      }
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #0000;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #2b372444;
+        border-radius: 999px;
+        /* border: 3px solid #405e47; */
+        height: 10px;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2a3026;
+      }
+      main {
+        overflow-y: auto;
+        height: 100%;
+        align-items: center;
+      }
+
+      section {
+        margin: auto;
+        width: min(1000px, 65%);
+        /* height: 100vh; */
+        min-height: 100%;
+        box-sizing: border-box;
+      }
+      section#hero-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        padding-bottom: 20vh;
+      }
+      section#work {
+        padding-top: 1px;
+        padding-bottom: 100px;
+      }
+      section#work h3 {
+        font-family: roboto;
+        font-weight: 300;
+        color: #000b;
+        font-size: 36px;
+        margin-top: 80px;
+      }
+      section#work h4 {
+        font-family: roboto;
+        font-weight: 400;
+        color: #0009;
+        font-size: 24px;
+        margin-top: 24px;
+        display: inline-block;
+      }
+      section#work h5 {
+        font-family: roboto;
+        font-weight: 400;
+        color: #0009;
+        font-size: 18px;
+        margin-top: 34px;
+      }
+      section#work p {
+        font-family: roboto;
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 1.8;
+        padding-left: 10px;
+        text-align: justify;
+      }
+      section#contact h2 {
+        font-family: roboto;
+        font-weight: 300;
+        color: #000b;
+        font-size: 36px;
+        padding-top: 80px;
+      }
+      section#contact p {
+        margin-top: 20px;
+      }
+      section#contact .contact-actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      section#contact .contact-actions > * {
+        padding: 7.5px 24px;
+        outline: unset;
+        border: none;
+        text-decoration: unset;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: roboto;
+        border-radius: 5px;
+        color: #fff9;
+        background-image: linear-gradient(to left, rgba(16, 55, 34, 0.2), rgba(22, 69, 35, 0.2), #177949, #198b4c);
+        background-size: 300% 100%;
+        background-position: 100% 0;
+        moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+      }
+      section#contact .contact-actions > *:hover {
+        background-position: 0% 0;
+      }
+
+      .project-site {
+        margin-left: 10px;
+        display: inline;
+        padding: 5px 6px 2px 7px;
+        border-radius: 5px;
+        background-color: #0002;
+        color: rgb(101, 204, 135);
+      }
+      .pre-text {
+        color: #19291cbb;
+        font-size: 16px;
+        font-family: roboto;
+        font-weight: 400;
+        /* margin-left: -70px; */
+        top: 105px;
+      }
+      h1 {
+        font-family: Thasadith, "Segoe UI", monospace, sans-serif;
+        font-weight: 300;
+        font-size: 110px;
+        color: #19291cdd;
+      }
+      h2.tagline {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 0px;
+        color: #19291cdd;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+      p.intro-para {
+        line-height: 1.5;
+        margin-top: 0px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #19291cdd;
+        margin-top: 40px;
+      }
+      .actions {
+        margin-top: 40px;
+      }
+      @media only screen and (max-width: 900px) {
+        section {
+          width: 85vw;
+        }
+        .pre-text {
+          display: none;
+        }
+        h1 {
+          font-family: Thasadith, "Segoe UI", monospace, sans-serif;
+          font-weight: 300;
+          font-size: 60px;
+          color: #19291cdd;
+        }
+        h2.tagline {
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 10px;
+          color: #19291cdd;
+        }
+        section#hero-section {
+          padding-bottom: 15vh;
+        }
+      }
+      @media only screen and (max-width: 370px) {
+        section#hero-section {
+          display: block;
+          flex-direction: column;
+          height: 100%;
+          justify-content: initial;
+          padding-top: 10vh;
+        }
+        h1 {
+          font-size: 50px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="background-overlay"></div>
-    <nav>
-      <ul>
-        <li data-panel-id="about-me-info-pane">
-          Home
-        </li>
-        <li data-panel-id="work-info-pane">
-          Work
-        </li>
-        <li data-panel-id="contact-info-pane">
-          Contact
-        </li>
-      </ul>
-      <h1 id="logo"></h1>
-    </nav>
     <main>
-
-      <div id="about-me-info-pane" class="info-pane">
-        <h1 id="main-text">Hi! I am Aaditya Tank,</h1>
-        <p class="body-text">I am a graphic designer and 3d modeler</p>
-        <input type="button" value="See my work >" class="my-work-button" onclick="show_panel('work-info-pane');"></input>
-      </div>
-
-      <div id="work-info-pane" class="info-pane">
-        <h2 id="main-text">Work</h2>
-      </div>
-
-      <div id="contact-info-pane" class="info-pane">
-        <h2 id="main-text">Contact</h2>
-      </div>
-
+      <section id="hero-section">
+        <div class="hero-wrapper">
+          <span class="pre-text">Hello, I'm</span>
+          <hgroup>
+            <h1 class="title-name">Aaditya Tank</h1>
+            <h2 class="tagline">
+              Web Developer <span>| Software Engineer</span>
+            </h2>
+          </hgroup>
+          <p class="intro-para">
+            I enjoy creating robust and scalable digital user experiences that
+            help people get things done seamlessly. I am known to occasionally
+            indulge in over engineering things.
+          </p>
+          <div class="actions">
+            <button onclick="view(event, '#work')">Work</button>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/aaditya-tank-970570170"
+            >
+              Linked In</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="work">
+        <div class="project">
+          <h3>KOHLER</h3>
+          <h4>SCOUT</h4>
+          <a
+            target="_blank"
+            class="project-site"
+            href="https://scout.kohler.com"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              class="bi bi-box-arrow-up-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+              /></svg
+          ></a>
+          <p>
+            Identifying a plumbing product once installed, sometimes years down
+            the line, when the need for maintenance arises can be difficult.
+            This was evident for our customers as indicated by our internal
+            analytics. Rather than asking customers to go through different
+            forms of guides, we built an app that would solve this issue more
+            intuitively.
+          </p>
+          <p>
+            We built a Progressive Web App that Customers could use to snap
+            pictures of their product and get not only identification of the
+            product but also additional relevant information like parts and
+            replacements greatly simplifying the process.
+          </p>
+          <h5>Agent Sync</h5>
+          <p>
+            A significant percentage of customers reaching out to us over calls
+            for support need to Identify their Product and would require
+            considerable amount of time and effort as this process would require
+            sharing picture back and forth. We created this Application for our
+            Agents to bridge this gap and get the information they needed quicky
+            providing users a seamless step by step flow once the opened the app
+            through email or sms.
+          </p>
+          <h5>Brand Integrations</h5>
+          <p>
+            This was more than an App. We extended these services to directly
+            integrate in the different brand sites to provide more cohesive
+            experience.
+          </p>
+          <h5>Validation</h5>
+          <p>
+            Data we gathered would be the key for success of the project,
+            especially those which require Artificial Intelligence and Machine
+            Learning as their backbone. So we worked on creating an app that
+            simplified the processing of data that we gathered for backend teams
+            to efficiently consume it.
+          </p>
+        </div>
+        <div class="project">
+          <h3>ACCENTURE</h3>
+          <h4>ENERGY UK</h4>
+          <h5>Smart Hub</h5>
+          <p>
+            Built an Application that helped cunsumers manage their energy need
+            by providing them insights on their energy consumptions history,
+            forecasts, and breakdown by appliance. We used machine learning to
+            generate some of the data.
+          </p>
+          <p>
+            We created visualizations to make the large amount of data palatable
+            to the users. We served to over 35 million customers.
+          </p>
+          <h5>My Account</h5>
+          <p>
+            A one stop portal for customers to manage their account and handle
+            task like changing tariff, make payments, move homes, monitor usage,
+            etc. digitally.
+          </p>
+        </div>
+        <div class="project">
+          <h3>RESEARCH / OPEN SOURCE</h3>
+          <h4>GRAY QR-CODE</h4>
+          <a
+            target="_blank"
+            class="project-site"
+            href="https://ieeexplore.ieee.org/document/7746204"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              class="bi bi-box-arrow-up-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+              /></svg
+          ></a>
+          <p>
+            Published a paper on a new way to store and transmit information
+            using gray level QR-Code structure in IEEE journal on November 2016.
+          </p>
+          <h4>useAsyncEffect Library</h4>
+          <a
+            target="_blank"
+            class="project-site"
+            href="https://ieeexplore.ieee.org/document/7746204"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              class="bi bi-box-arrow-up-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+              /></svg
+          ></a>
+          <p>
+            Published a library to simplify managing async flow in ReactJs
+            effects and minimize memory leak issues.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>CONTACT</h2>
+        <p>I'm always down to collaborate. Let's get in touch✌️</p>
+        <div class="contact-actions">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/aaditya-tank-970570170"
+          >
+            Linked In</a
+          >
+          <a target="_blank" href="mailto:aaditya.tank.1995@gmail.com">
+            E-Mail</a
+          >
+        </div>
+      </section>
     </main>
+    <script>
+      const view = (e, hash) => {
+        e.preventDefault();
+        document.querySelector(hash).scrollIntoView({
+          behavior: "smooth",
+        });
+      };
+    </script>
   </body>
 </html>
