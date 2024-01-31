@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
     <title>Aaditya Tank - Portfolio</title>
     <style>
       * {
@@ -18,23 +22,23 @@
           #405e47 100%
         );
         background: radial-gradient(
-          circle at top left, 
-          hsl(103, 22%, 43%) 0%, 
+          circle at top left,
+          hsl(103, 22%, 43%) 0%,
           hsl(120, 19%, 18%) 100%
         );
         background: radial-gradient(
-          circle at top left, 
-          hsl(103, 22%, 43%) 0%, 
+          circle at top left,
+          hsl(103, 22%, 43%) 0%,
           hsl(120, 22%, 25%) 100%
         );
         background: radial-gradient(
-          circle at top left, 
-          hsl(115, 23%, 45%) 0%, 
+          circle at top left,
+          hsl(115, 23%, 45%) 0%,
           hsl(137, 32%, 25%) 100%
         );
         background: radial-gradient(
-          circle at top left, 
-          hsl(115, 23%, 55%) 0%, 
+          circle at top left,
+          hsl(115, 23%, 55%) 0%,
           hsl(140, 32%, 32%) 100%
         );
         height: 100vh;
@@ -45,8 +49,10 @@
         padding: 0px 5px;
         margin: 0px;
         overflow: none;
-        font-family: Roboto, sans-serif;
-        font-weight: 100;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #19291cbb;
+        letter-spacing: -0.2px;
       }
       main {
         width: 100%;
@@ -126,26 +132,36 @@
       .actions > a {
         padding: 7.5px 24px;
         background-color: #0003;
-        background: linear-gradient(135deg, #0003, #0003) ;
+        background: linear-gradient(135deg, #0003, #0003);
         outline: unset;
         border: none;
         text-decoration: unset;
         font-size: 16px;
-        font-weight: 300;
-        font-family: roboto;
         border-radius: 5px;
         color: #fff9;
-        background-image: linear-gradient(to left, rgba(16, 55, 34, 0.2), rgba(22, 69, 35, 0.2), #177949, #198b4c);
-        background-size: 300% 100%;
-        background-position: 100% 0;
-        moz-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        -webkit-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
+        background-image: linear-gradient(
+          to left,
+          rgba(16, 55, 34, 0.2),
+          rgba(22, 69, 35, 0.2),
+          #177949,
+          #198b4c
+        );
+        background-size: 330% 100%;
+        background-position: 95% 0;
+        moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        border: 2px solid #0000;
       }
       .actions > button:hover,
       .actions > a:hover {
-        background-position: 0% 0;
+        background-position: 00% 0;
+      }
+      .actions > button:focus,
+      .actions > a:focus {
+        border: 2px solid #0b370b;
+        background-position: 00% 0;
       }
       /* width */
       ::-webkit-scrollbar {
@@ -169,7 +185,6 @@
       main {
         overflow-y: auto;
         height: 100%;
-        align-items: center;
       }
 
       section {
@@ -191,14 +206,12 @@
         padding-bottom: 100px;
       }
       section#work h3 {
-        font-family: roboto;
         font-weight: 300;
         color: #000b;
         font-size: 36px;
         margin-top: 80px;
       }
       section#work h4 {
-        font-family: roboto;
         font-weight: 400;
         color: #0009;
         font-size: 24px;
@@ -206,14 +219,12 @@
         display: inline-block;
       }
       section#work h5 {
-        font-family: roboto;
         font-weight: 400;
         color: #0009;
         font-size: 18px;
         margin-top: 34px;
       }
       section#work p {
-        font-family: roboto;
         margin-top: 12px;
         font-size: 16px;
         line-height: 1.8;
@@ -221,7 +232,6 @@
         text-align: justify;
       }
       section#contact h2 {
-        font-family: roboto;
         font-weight: 300;
         color: #000b;
         font-size: 36px;
@@ -242,19 +252,29 @@
         text-decoration: unset;
         font-size: 16px;
         font-weight: 300;
-        font-family: roboto;
         border-radius: 5px;
         color: #fff9;
-        background-image: linear-gradient(to left, rgba(16, 55, 34, 0.2), rgba(22, 69, 35, 0.2), #177949, #198b4c);
+        background-image: linear-gradient(
+          to left,
+          rgba(16, 55, 34, 0.2),
+          rgba(22, 69, 35, 0.2),
+          #177949,
+          #198b4c
+        );
+        border: 2px solid #0000;
         background-size: 300% 100%;
-        background-position: 100% 0;
-        moz-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        -webkit-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
+        background-position: 95% 0;
+        moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
       section#contact .contact-actions > *:hover {
         background-position: 0% 0;
+      }
+      section#contact .contact-actions > *:focus {
+        border: 2px solid #0b370b;
+        background-position: 00% 0;
       }
 
       .project-site {
@@ -263,19 +283,33 @@
         padding: 5px 6px 2px 7px;
         border-radius: 5px;
         background-color: #0002;
+        background-image: linear-gradient(
+          to left,
+          rgba(16, 55, 34, 0.2),
+          rgba(22, 69, 35, 0.2),
+          #177949,
+          #198b4c
+        );
+        outline: none;
+        background-size: 300% 100%;
+        background-position: 95% 0;
         color: rgb(101, 204, 135);
+        border: 2px solid #0000;
+        transition: all 0.2s ease;
+      }
+      .project-site:hover,
+      .project-site:focus {
+        background-position: 10% 0;
+      }
+      .project-site:focus {
+        border: 2px solid #0b370b;
       }
       .pre-text {
-        color: #19291cbb;
         font-size: 16px;
-        font-family: roboto;
         font-weight: 400;
-        /* margin-left: -70px; */
-        top: 105px;
       }
       h1 {
-        font-family: Thasadith, "Segoe UI", monospace, sans-serif;
-        font-weight: 300;
+        font-weight: 200;
         font-size: 110px;
         color: #19291cdd;
       }
@@ -291,7 +325,7 @@
         margin-top: 10px;
       }
       p.intro-para {
-        line-height: 1.5;
+        line-height: 1.6;
         margin-top: 0px;
         font-size: 16px;
         font-weight: 400;
@@ -309,7 +343,6 @@
           display: none;
         }
         h1 {
-          font-family: Thasadith, "Segoe UI", monospace, sans-serif;
           font-weight: 300;
           font-size: 60px;
           color: #19291cdd;
@@ -441,7 +474,7 @@
           </p>
           <p>
             We created visualizations to make the large amount of data palatable
-            to the users. We served to over 35 million customers. 
+            to the users. We served to over 35 million customers.
           </p>
           <h5>My Account</h5>
           <p>
